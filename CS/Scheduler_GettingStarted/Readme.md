@@ -15,7 +15,7 @@ The example contains the source code of the application created in the [Getting 
 - [Enable the Edit Appointment Form](https://docs.devexpress.com/MobileControls/400701/xamarin-forms/scheduler/getting-started/lesson-3-edit-appointment)
 - [Create Custom Labels](https://docs.devexpress.com/MobileControls/400686/xamarin-forms/scheduler/getting-started/lesson-4-custom-labels-and-statuses)
 
-<img src="./img/scheduler-getting-started-lesson2.png" height="75%" />  
+<img src="./img/scheduler-getting-started-lesson1.png" height="75%" />  
 <img src="./img/scheduler-getting-started-lesson4.png" height="75%" />
 
 To run the application:
