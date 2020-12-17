@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxsch="http://schemas.devexpress.com/xamarin/2014/forms/scheduler"
+             xmlns:local="clr-namespace:Scheduler_GettingStarted"
+             x:Class="Scheduler_GettingStarted.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ReceptionDeskViewModel/>
+    </ContentPage.BindingContext>
+    <dxsch:WorkWeekView Start="{Binding StartDate}"
+                        FirstDayOfWeek="Monday"
+                        WorkDays="Monday,Tuesday,Wednesday,Friday" 
+                        WorkTime="7:00:00-19:00:00"
+                        ShowWorkTimeOnly="True"
+                        TimeScaleInterval="01:00:00"
+                        TimeScaleSlotCount="4"
+                        SnapToCellsMode="Never"
+                        Tap="WorkWeekView_Tap">
+        <dxsch:WorkWeekView.DataStorage>
+            <dxsch:SchedulerDataStorage x:Name="storage">
+                <dxsch:SchedulerDataStorage.DataSource>
+                    <dxsch:DataSource AppointmentsSource="{Binding MedicalAppointments}"
+                                      AppointmentLabelsSource="{Binding AppointmentTypes}">
+                        <dxsch:DataSource.AppointmentMappings>
+                            <dxsch:AppointmentMappings 
+                            Id="Id" 
+                            Start="StartTime" 
+                            End="EndTime" 
+                            Subject="Subject"
+                            LabelId="LabelId"
+                            Location="Location"/>
+                        </dxsch:DataSource.AppointmentMappings>
+                        <dxsch:DataSource.AppointmentLabelMappings>
+                            <dxsch:AppointmentLabelMappings
+                                Caption="Caption"
+                                Color="Color"
+                                Id="Id"/>
+                        </dxsch:DataSource.AppointmentLabelMappings>
+                    </dxsch:DataSource>
+                </dxsch:SchedulerDataStorage.DataSource>
+            </dxsch:SchedulerDataStorage>
+        </dxsch:WorkWeekView.DataStorage>
+    </dxsch:WorkWeekView>
+</ContentPage>
