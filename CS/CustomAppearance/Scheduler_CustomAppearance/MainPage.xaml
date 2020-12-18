@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxsch="http://schemas.devexpress.com/xamarin/2014/forms/scheduler"
+             x:Class="Scheduler_CustomAppearance.MainPage"
+             xmlns:local="clr-namespace:Scheduler_CustomAppearance">
+    <ContentPage.BindingContext>
+        <local:ReceptionDeskViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <dxsch:TextStyle x:Key="redText" Color="red"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <dxsch:WorkWeekView>
+        <dxsch:WorkWeekView.DataStorage>
+            <dxsch:SchedulerDataStorage>
+                <dxsch:SchedulerDataStorage.DataSource>
+                    <dxsch:DataSource AppointmentsSource="{Binding MedicalAppointments}">
+                        <dxsch:DataSource.AppointmentMappings>
+                            <dxsch:AppointmentMappings 
+                                    Id="Id" 
+                                    Start="StartTime" 
+                                    End="EndTime" 
+                                    Subject="Subject"
+                                    LabelId="LabelId"
+                                    Location="Location"/>
+                        </dxsch:DataSource.AppointmentMappings>
+                    </dxsch:DataSource>
+                </dxsch:SchedulerDataStorage.DataSource>
+            </dxsch:SchedulerDataStorage>
+        </dxsch:WorkWeekView.DataStorage>
+        <!--Customize the date header appearance.-->
+        <dxsch:WorkWeekView.HeaderItemStyle>
+            <dxsch:DayViewHeaderItemStyle BackgroundColor="#dce0ec" 
+                                          TodayDayNumberBackgroundColor="#fff7c2"
+                                          TodayDayNumberTextStyle="{StaticResource redText}"
+                                          TodayWeekDayTextStyle="{StaticResource redText}"/>
+        </dxsch:WorkWeekView.HeaderItemStyle>
+
+        <!--Customize the time ruler appearance.-->
+        <dxsch:WorkWeekView.TimeRulerCellStyle>
+            <dxsch:TimeRulerCellStyle BackgroundColor="#dce0ec" 
+                                      IntervalTickColor="#8e9bbc" IntervalTickLength="15"
+                                      SlotTickColor="#8e9bbc" SlotTickLength="7"/>
+        </dxsch:WorkWeekView.TimeRulerCellStyle>
+        <dxsch:WorkWeekView.TimeRulerHeaderStyle>
+            <dxsch:TimeRulerHeaderStyle BackgroundColor="#dce0ec"/>
+        </dxsch:WorkWeekView.TimeRulerHeaderStyle>
+
+        <!--Customize the all-day area appearance.-->
+        <dxsch:WorkWeekView.AllDayCellStyle>
+            <dxsch:AllDayAreaCellStyle BackgroundColor="#f1f1f1" 
+                                       TodayBackgroundColor="#fff7c2"/>
+        </dxsch:WorkWeekView.AllDayCellStyle>
+
+        <!--Customize the cell appearance.-->
+        <dxsch:WorkWeekView.CellStyle>
+            <dxsch:DayViewCellStyle WorkTimeBackgroundColor="White"
+                                    BackgroundColor="#f1f1f1"
+                                    TodayBackgroundColor="#fff7c2"
+                                    BorderColor="#bdbdbd"
+                                    SlotBorderColor="#e1e1e1">
+                <dxsch:DayViewCellStyle.Customizer>
+                    <local:WorkWeekViewCellCustomizer/>
+                </dxsch:DayViewCellStyle.Customizer>
+            </dxsch:DayViewCellStyle>
+        </dxsch:WorkWeekView.CellStyle>
+    </dxsch:WorkWeekView>
+
+</ContentPage>
