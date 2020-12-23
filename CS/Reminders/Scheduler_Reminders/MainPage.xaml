@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxsch="http://schemas.devexpress.com/xamarin/2014/forms/scheduler"
+             xmlns:local="clr-namespace:Scheduler_Reminders"
+             x:Class="Scheduler_Reminders.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <dxsch:DayView SnapToCellsMode="Never" Tap="OnTap">
+        <dxsch:DayView.DataStorage>
+            <dxsch:SchedulerDataStorage x:Name="storage" RemindersChanged="OnRemindersChanged">
+                <dxsch:SchedulerDataStorage.DataSource>
+                    <dxsch:DataSource AppointmentsSource="{Binding AppointmentRepository}" >
+                        <dxsch:DataSource.AppointmentMappings>
+                            <dxsch:AppointmentMappings 
+                                AllDay="AllDay"
+                                Start="Start"
+                                End="End"
+                                Subject="Subject"
+                                LabelId="Label"
+                                StatusId="Status"
+                                RecurrenceInfo="RecurrenceInfo"
+                                Reminder="ReminderInfo"/>
+                        </dxsch:DataSource.AppointmentMappings>
+                    </dxsch:DataSource>
+                </dxsch:SchedulerDataStorage.DataSource>
+            </dxsch:SchedulerDataStorage>
+        </dxsch:DayView.DataStorage>
+    </dxsch:DayView>
+
+</ContentPage>
