@@ -1,6 +1,6 @@
 <!-- default file list -->
 *Files to look at*:
-
+**Shared Project**
 * [MainPage.xaml](./Scheduler_Reminders/MainPage.xaml)
 * [MainPage.xaml.cs](./Scheduler_Reminders/MainPage.xaml.cs)
 * [Model.cs](./Scheduler_Reminders/Model.cs)
@@ -8,9 +8,11 @@
 * [App.xaml.cs](./Scheduler_Reminders/App.xaml.cs)
 * [RemindersNotificationCenter.cs](./Scheduler_Reminders/RemindersNotificationCenter.cs)
 
+**iOS Project**
 * [NotificationCenter.cs](./Scheduler_Reminders.iOS/NotificationCenter.cs)
 * [AppDelegate.cs](./Scheduler_Reminders.iOS/AppDelegate.cs)
 
+**Android Project**
 * [NotificationCenter.cs](./Scheduler_Reminders.Android/NotificationCenter.cs)
 * [NotificationAlarmHandler.cs](./Scheduler_Reminders.Android/NotificationAlarmHandler.cs)
 * [MainActivity.cs](./Scheduler_Reminders.Android/MainActivity.cs)
