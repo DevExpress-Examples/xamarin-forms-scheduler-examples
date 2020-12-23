@@ -19,7 +19,7 @@ namespace CustomDayViewProviders.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             global::Xamarin.Forms.Forms.Init();
-            DevExpress.XamarinForms.Scheduler.Initializer.Init();
+            DevExpress.XamarinForms.Scheduler.iOS.Initializer.Init();
 
             DayViewProviderService.RegisterViewProviderService(new CustomDayViewProviderService());
 
