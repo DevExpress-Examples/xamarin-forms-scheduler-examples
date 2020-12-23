@@ -1,5 +1,6 @@
 <!-- default file list -->
-*Files to look at*:
+*Files to look at*:  
+
 **Shared Project**
 * [MainPage.xaml](./Scheduler_Reminders/MainPage.xaml)
 * [MainPage.xaml.cs](./Scheduler_Reminders/MainPage.xaml.cs)
