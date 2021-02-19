@@ -11,7 +11,7 @@ This example demonstrates how to specify custom native Android and iOS views for
         - **RecycleView** - adds a view to the cache.
         - **Recycle** - clears the cache.
 
-2. In the [MainActivity.cs](./CustomDayViewProviders.Android/MainActivity.cs) file, register a custom service that inherits the **DayViewProviderService** class and override the **CreateCellViewProvider** and **CreateDateHeaderViewProvider** methods to use custom view providers for date headers and cells.
+2. In the [MainActivity.cs](./CustomDayViewProviders.Android/MainActivity.cs) file, register a custom service that inherits the **DayViewProviderService** class and override the **CreateCellViewProvider** and **CreateDateHeaderViewProvider** methods to use custom view providers for cells and date headers.
 
 ## iOS
 1. Create the [CustomDateHeaderViewProvider.cs](./CustomDayViewProviders.iOS/CustomViewProviders/CustomDateHeaderViewProvider.cs) and [CustomCellViewProvider.cs](./CustomDayViewProviders.iOS/CustomViewProviders/CustomCellViewProvider.cs) classes that implement the **IViewProvider** interface and define custom view providers for date headers and cells. 
@@ -22,7 +22,7 @@ This example demonstrates how to specify custom native Android and iOS views for
         - **RequestView** - returns a view from the cache, if any, otherwise creates a new view (an instance of the [CustomCell.cs](./CustomDayViewProviders.iOS/CustomViews/CustomCell.cs) class that inherits  [UIView](https://docs.microsoft.com/en-us/dotnet/api/uikit.uiview?view=xamarin-ios-sdk-12)).
         - **RecycleView** - adds a view to the cache.
 
-2. In the [AppDelegate.cs](./CustomDayViewProviders.iOS/AppDelegate.cs) file, register a custom service that inherits the **DayViewProviderService** class and override the **CreateCellViewProvider** and **CreateDateHeaderViewProvider** methods to use custom view providers for date headers and cells.
+2. In the [AppDelegate.cs](./CustomDayViewProviders.iOS/AppDelegate.cs) file, register a custom service that inherits the **DayViewProviderService** class and override the **CreateCellViewProvider** and **CreateDateHeaderViewProvider** methods to use custom view providers for cells and date headers.
 
 Note that the **DayViewProviderService** class has also methods that allow you to specify custom view providers for other Day View elements: 
 - **CreateAppointmentViewProvider**
