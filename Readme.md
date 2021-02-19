@@ -4,5 +4,5 @@ Examples:
 - [Reminders](./CS/Reminders)
 - [Custom Appearance](./CS/CustomAppearance)
 - [Dark Theme](./CS/DarkTheme)
-- [Custom Day View Providers](./CS/CustomDayViewProviders)  
-- [Custom Month View Providers](./CS/CustomMonthViewProviders) 
+- [Day View - Native Platform Views for Date Headers and Cells](./CS/CustomDayViewProviders)  
+- [Month View - Native Platform Views for Appointments and Cells](./CS/CustomMonthViewProviders) 
