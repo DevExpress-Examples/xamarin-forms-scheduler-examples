@@ -1,6 +1,11 @@
 # Day View - Native Platform Views for Date Headers and Cells
 This example demonstrates how to specify custom native Android and iOS views for date headers and cells of the [Day View](https://docs.devexpress.com/MobileControls/400677/xamarin-forms/scheduler/views/views#day-view). To do this, implement *view providers* and register these implementations in each platform project.
 
+To run the application:
+1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
+2. Register the DevExpress NuGet feed as a package source.
+3. Restore all NuGet packages for the solution.
+
 ## Android 
 1. Create the [CustomDateHeaderViewProvider.cs](./CustomDayViewProviders.Android/CustomViewProviders/CustomDateHeaderViewProvider.cs) and [CustomDayCellViewProvider.cs](./CustomDayViewProviders.Android/CustomViewProviders/CustomDayCellViewProvider.cs) classes that define custom view providers for date headers and cells. A view provider class should implement the **IViewProvider** or **ICachedViewProvider** (for views with many elements) interface. 
     - **CustomDateHeaderViewProvider** - implements the **IViewProvider** interface.  
@@ -31,8 +36,3 @@ Note that the **DayViewProviderService** class has also methods that allow you t
 - **CreateTimeRulerCellViewProvider**
 - **CreateTimeRulerHeaderViewProvider** 
 
-
-To run the application:
-1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-2. Register the DevExpress NuGet feed as a package source.
-3. Restore all NuGet packages for the solution.
