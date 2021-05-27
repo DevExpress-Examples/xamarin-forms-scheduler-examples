@@ -123,13 +123,13 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Scheduler_GettingStarted\Scheduler_GettingStarted.csproj">
-      <Project>{32CDE01A-6AE0-40F8-B445-898ED828AB7A}</Project>
+      <Project>{96F928F3-3B23-4841-9A27-3D654EFBA25F}</Project>
       <Name>Scheduler_GettingStarted</Name>
     </ProjectReference>
   </ItemGroup>

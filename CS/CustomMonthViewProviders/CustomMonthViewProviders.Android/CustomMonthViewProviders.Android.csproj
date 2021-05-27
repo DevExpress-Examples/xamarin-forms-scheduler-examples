@@ -53,8 +53,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CustomMonthViewProviders\CustomMonthViewProviders.csproj">
-      <Project>{5398D922-4686-4B2C-A8E6-817130F230A9}</Project>
+      <Project>{F6E7754A-3DC6-4469-96B3-52BF8641C4CB}</Project>
       <Name>CustomMonthViewProviders</Name>
     </ProjectReference>
   </ItemGroup>
