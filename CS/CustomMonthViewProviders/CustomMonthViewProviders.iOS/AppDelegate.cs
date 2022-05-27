@@ -22,6 +22,7 @@ namespace CustomMonthViewProviders.iOS {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             global::Xamarin.Forms.Forms.Init();
             DevExpress.XamarinForms.Scheduler.iOS.Initializer.Init();
+            DevExpress.XamarinForms.Editors.iOS.Initializer.Init();
 
             MonthViewProviderService.RegisterViewProviderService(new CustomMonthViewProviderService());
 

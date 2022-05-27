@@ -24,6 +24,7 @@ namespace Scheduler_GettingStarted.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             DevExpress.XamarinForms.Scheduler.iOS.Initializer.Init();
+            DevExpress.XamarinForms.Editors.iOS.Initializer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

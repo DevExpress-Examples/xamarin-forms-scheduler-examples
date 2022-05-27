@@ -19,6 +19,7 @@ namespace Scheduler_Reminders.iOS {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             global::Xamarin.Forms.Forms.Init();
             DevExpress.XamarinForms.Scheduler.iOS.Initializer.Init();
+            DevExpress.XamarinForms.Editors.iOS.Initializer.Init();
             App formsApplication = new App();
             UNUserNotificationCenter.Current.Delegate =
                                     new CustomUserNotificationCenterDelegate(formsApplication);
